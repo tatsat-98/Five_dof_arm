@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="five_dof_arm">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.036698 8.6694E-08 0.082351" rpy="0 0 0" />
+            <mass value="116.33" />
+            <inertia ixx="1.3166" ixy="9.8221E-07" ixz="0.14401" iyy="1.8831" iyz="-4.9019E-07" izz="2.2864" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0 0 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="L1">
+        <inertial>
+            <origin xyz="-1.6643E-09 -2.7822E-09 -0.19998" rpy="0 0 0" />
+            <mass value="78.961" />
+            <inertia ixx="1.368" ixy="4.399E-07" ixz="1.3687E-08" iyy="1.5595" iyz="-7.928E-09" izz="0.54132" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.18824 0.18824 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="J1" type="revolute">
+        <origin xyz="0 0 0.074709" rpy="3.1416 0 -0.37541" />
+        <parent link="base_link" />
+        <child link="L1" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.142" effort="30" velocity="3" />
+    </joint>
+    <link name="L2">
+        <inertial>
+            <origin xyz="-0.17131 0.0017377 2.2204E-16" rpy="0 0 0" />
+            <mass value="113.71" />
+            <inertia ixx="0.49464" ixy="-0.0064008" ixz="-1.478E-15" iyy="4.7884" iyz="6.6613E-16" izz="4.4699" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.2 1 0.2 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="J2" type="revolute">
+        <origin xyz="0 0 -0.36529" rpy="-3.1416 -1.0316 0" />
+        <parent link="L1" />
+        <child link="L2" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="30" velocity="10" />
+    </joint>
+    <link name="L3">
+        <inertial>
+            <origin xyz="-5.0468E-10 -0.05636 0.12694" rpy="0 0 0" />
+            <mass value="53.404" />
+            <inertia ixx="0.56565" ixy="-6.219E-09" ixz="-1.4898E-08" iyy="0.28458" iyz="0.053644" izz="0.43901" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="J3" type="revolute">
+        <origin xyz="-0.5 0 0" rpy="1.2739 0 -1.5708" />
+        <parent link="L2" />
+        <child link="L3" />
+        <axis xyz="1 0 0" />
+        <limit lower="-.157" upper="1.57" effort="30" velocity="3" />
+    </joint>
+    <link name="L4">
+        <inertial>
+            <origin xyz="7.4797E-11 0.24268 -2.8358E-10" rpy="0 0 0" />
+            <mass value="34.299" />
+            <inertia ixx="0.25777" ixy="3.0811E-10" ixz="-1.7427E-09" iyy="0.11336" iyz="-5.0709E-10" izz="0.24606" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.70196 0.50588 0.36471 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="J4" type="revolute">
+        <origin xyz="0 -0.10716 0.145" rpy="0 -1.2765 3.1416" />
+        <parent link="L3" />
+        <child link="L4" />
+        <axis xyz="0 1 0" />
+        <limit lower="0" upper="3.14" effort="30" velocity="3" />
+    </joint>
+    <link name="L5">
+        <inertial>
+            <origin xyz="-9.2825E-08 2.7598E-08 -0.0081668" rpy="0 0 0" />
+            <mass value="9.3568" />
+            <inertia ixx="0.048788" ixy="2.1735E-08" ixz="-3.2988E-08" iyy="0.052818" iyz="3.4112E-09" izz="0.017702" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.4 0 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://five_dof_arm/meshes/L5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="J5" type="revolute">
+        <origin xyz="0 0.34684 0" rpy="-1.5708 0 2.9789" />
+        <parent link="L4" />
+        <child link="L5" />
+        <axis xyz="0 -1 0" />
+        <limit lower="-1.57" upper="1.57" effort="30" velocity="10" />
+    </joint>
+    <transmission name="trans_J1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="J1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="J1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_J2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="J2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="J2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_J3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="J3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="J3_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_J4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="J4">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="J4_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_J5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="J5">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="J5_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+
