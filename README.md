@@ -43,7 +43,7 @@ Install MoveIt! if needed: sudo apt install ros-noetic-moveit
 ├── launch/                     # Launch files  
 ├── urdf/                       # Robot URDF file  
 ├── scripts/                    # Python control scripts  
-│   └── pick_and_place.py  
+│   └── pick_place.py  
 ├── CMakeLists.txt  
 ├── package.xml  
 └── README.md  
