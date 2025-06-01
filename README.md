@@ -58,7 +58,7 @@ Install MoveIt! if needed: sudo apt install ros-noetic-moveit
   
 
 Author
-Tatsat
+Tatsat  
 Machinist | Mechatronics and Mechanical Engineer
 tatsat2409dave@gmail.com
 
